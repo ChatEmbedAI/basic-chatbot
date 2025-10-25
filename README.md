@@ -1,7 +1,7 @@
 # 🧠 AI Chatbots: End-to-End Tutorials
 
-Learn to build intelligent, **production-ready chatbots** using **LangChain**, **LangGraph**, **AWS**, and **Hugging Face** — step-by-step.  
-This series walks you through everything from creating a simple chatbot to designing a **fully-featured conversational AI system** ready for real-world use.
+Learn to build intelligent chatbots using **LangChain** and other modern AI tools — step-by-step.  
+This series walks you through everything from creating a simple conversational bot to designing more advanced AI systems, with practical examples and clear explanations.
 
 ---
 
@@ -19,16 +19,15 @@ By the end of the series, you’ll have a **complete, modular chatbot architectu
 
 | Stage | Title | Description | Status |
 |:--|:--|:--|:--|
-| 1️⃣ | **A Very Basic ChatBot Using LangChain and LangGraph** | Build your first chatbot using LangChain and LangGraph — understand the fundamentals of chaining and graph-based flow control. | 🟢 *Coming Soon* |
+| 1️⃣ | **How to Build a Simple ChatBot with Langchain** | Learn to build a basic conversational bot with LangChain, covering core concepts like model initialization, chat handling, and environment setup. | 🟢 *Ready* |
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **[LangChain](https://github.com/langchain-ai/langchain)** – Framework for developing applications powered by language models.  
-- **[LangGraph](https://github.com/langchain-ai/langgraph)** – A graph-based orchestration system for LangChain components.  
-- **[Hugging Face](https://huggingface.co)** – Model hosting, inference APIs, and datasets.  
-- **AWS** – For deployment, scalability, and cloud integrations (Lambda, S3, Bedrock).  
+- **[LangChain](https://github.com/langchain-ai/langchain)** – Framework for developing applications powered by language models
+- **[Python-dotenv](https://github.com/theskumar/python-dotenv)** – Environment variable management for secure configuration
+- **[OpenAI](https://platform.openai.com)** – Large Language Model provider for chat capabilities
 
 ---
 
@@ -40,15 +39,6 @@ By the end of the series, you’ll have a **complete, modular chatbot architectu
 
 ---
 
-## 🧭 Goals of the Series
-
-- Teach **practical chatbot development** — not just theory.  
-- Show **how to structure scalable AI systems**.  
-- Emphasize **LangGraph’s role** in orchestrating multi-agent flows.  
-- Cover **real deployment patterns** (AWS, Docker, CI/CD).  
-
----
-
 ## 🤝 Contributions & Feedback
 
 Feedback, suggestions, and contributions are welcome!  
@@ -57,12 +47,4 @@ If you’d like to request a topic or suggest an improvement:
 
 ---
 
-## 📬 Stay Updated
-
-Follow the series on:
-- **Website:** [Our Website](https://chatembedai.com)
-- **Hashnode:** [Our Blog](https://blog.chatembedai.com)
-- **GitHub:** [A Very Basic ChatBot](https://github.com/ChatEmbedAI/basic-chatbot)  
-
----
 
