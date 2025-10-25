@@ -95,7 +95,7 @@ class ChatBot:
 
 if __name__ == "__main__":
     try:
-        chatbot = ChatBot("gpt-4-mini", "openai")
+        chatbot = ChatBot("gpt-4o-mini", "openai")
         print("ChatBot initialized. Type 'q' to quit.")
 
         while True:
