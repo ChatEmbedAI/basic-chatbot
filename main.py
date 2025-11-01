@@ -48,6 +48,8 @@ class ChatBot:
             The LLM model to use during chat
         model_provider: string
             The provider who provides this LLM
+        session_id : string | None
+            Unique session id for the chat session
         """
         self.model = model
         self.model_provider = model_provider
