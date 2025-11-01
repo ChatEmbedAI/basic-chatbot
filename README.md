@@ -19,8 +19,8 @@ By the end of the series, you’ll have a **complete, modular chatbot architectu
 
 | Stage | Title | Description | Status |
 |:--|:--|:--|:--|
-| 1️⃣ | **How to Build a Simple ChatBot with Langchain** | Learn to build a basic conversational bot with LangChain, covering core concepts like model initialization, chat handling, and environment setup. | 🟢 *Ready* |
-
+| 1 | **Build a Simple ChatBot with LangChain (Part 1): Beginner Guide** | Learn to build a basic conversational bot with LangChain, covering core concepts like model initialization, chat handling, and environment setup. | 🟢 *Ready* |
+| 2 | **Build a Simple ChatBot with LangChain (Part 2): Add Short-Term & Long-Term Memory (Beginner Guide)** | Learn to add context to the chatbot when generating response. | 🟢 *Ready* |
 ---
 
 ## 🛠️ Technologies Used
