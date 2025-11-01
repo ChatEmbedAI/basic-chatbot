@@ -8,12 +8,14 @@ Later in the series it will receive more add-on.
 Blog:- https://blog.chatembedai.com/series/build-ai-chatbots
 """
 
+import uuid
 from typing import Any
 
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain.chat_models import init_chat_model
 from langchain_core.messages import HumanMessage
+from langgraph.checkpoint.memory import InMemorySaver
 
 """ load environment variables """
 load_dotenv()
@@ -36,7 +38,7 @@ class ChatBot:
         Returns the LLM response.
     """
 
-    def __init__(self, model: str, model_provider: str) -> None:
+    def __init__(self, model: str, model_provider: str, session_id: str | None) -> None:
         """
         Constructs all the necessary attributes for the Chat.
 
@@ -50,6 +52,8 @@ class ChatBot:
         self.model = model
         self.model_provider = model_provider
         self.__initialize_model()
+        self.memory = InMemorySaver()
+        self.session = session_id if session_id else str(uuid.uuid4())
 
     def __initialize_model(self) -> None:
         """
@@ -66,7 +70,7 @@ class ChatBot:
         """
         Private method to create the agent
         """
-        return create_agent(model=self.chat_model)
+        return create_agent(model=self.chat_model, checkpointer=self.memory)
 
     def chat_with_me(self, message: str) -> str:
         """
@@ -86,7 +90,10 @@ class ChatBot:
             agent = self.__get_agent()
             human_message = HumanMessage(content=message)
 
-            response = agent.invoke({"messages": [human_message]})
+            response = agent.invoke(
+                {"messages": [human_message]},
+                {"configurable": {"thread_id": self.session}},
+            )
 
             return response["messages"][-1].content
         except Exception as e:
@@ -95,7 +102,7 @@ class ChatBot:
 
 if __name__ == "__main__":
     try:
-        chatbot = ChatBot("gpt-4o-mini", "openai")
+        chatbot = ChatBot("gpt-4o-mini", "openai", "example_session_1")
         print("ChatBot initialized. Type 'q' to quit.")
 
         while True:
